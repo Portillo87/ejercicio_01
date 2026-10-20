@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src https://rickandmortyapi.com; img-src 'self' https://rickandmortyapi.com data:;"
+    />
+    <title>Rick and Morty Desktop</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>Rick and Morty Desktop</h1>
+        <p>Consulta de personajes usando la API de Rick and Morty</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="toolbar">
+        <button id="btn-prev" type="button">Anterior</button>
+        <span id="page-info">Pagina 1</span>
+        <button id="btn-next" type="button">Siguiente</button>
+      </section>
+      <section id="loading" class="loading">Cargando personajes...</section>
+      <section id="message" class="message hidden"></section>
+      <section id="cards" class="cards"></section>
+
+      <template id="template-card">
+        <article class="card">
+          <img class="character-image" src="" alt="Personaje" />
+          <div class="card-body">
+            <h2 class="name"></h2>
+            <p><strong>Estado:</strong> <span class="status"></span></p>
+            <p><strong>Especie:</strong> <span class="species"></span></p>
+            <p><strong>Genero:</strong> <span class="gender"></span></p>
+            <p><strong>Origen:</strong> <span class="origin"></span></p>
+          </div>
+        </article>
+      </template>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

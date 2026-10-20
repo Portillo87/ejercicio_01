@@ -1,0 +1,21 @@
+{
+  "name": "ejercicio_01",
+  "productName": "Rick and Morty Desktop",
+  "version": "1.0.0",
+  "description": "Aplicacion de escritorio para consultar personajes de Rick and Morty",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "javascript",
+    "rick-and-morty"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "44.9.1"
+  }
+}
