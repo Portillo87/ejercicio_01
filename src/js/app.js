@@ -17,15 +17,12 @@ const fetchData = async (url = API_URL) => {
     try {
         loadingData(true)
         message.classList.add('hidden')
-
         const response = await fetch(url)
-
         if (!response.ok) {
             throw new Error('No se pudo consultar la API')
         }
 
         const data = await response.json()
-
         nextPage = data.info.next
         prevPage = data.info.prev
         currentPage = getPageNumber(url)
